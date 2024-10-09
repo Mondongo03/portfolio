@@ -59,17 +59,12 @@
   background-color: #e5e5e5;
 }
 
-.d-md-flex, flex-md-equal, w-100 my-md-3, ps-md-3 {
-  display: grid;
-  grid-template-columns: auto auto;
-}
 /*
  * Extra utilities
  */
 
-.flex-equal > * {
+ .flex-equal > * {
   flex: 1;
-  height: 468; 
 }
 @media (min-width: 768px) {
   .flex-md-equal > * {
@@ -77,3 +72,37 @@
   }
 }
 
+.tabla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  
+}
+.projectImg {
+  width: 80%;
+  border-radius: 20px;
+  
+}
+.technologyImg {
+  height: 3rem;
+}
+#blackBackground {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 5%;
+}
+.technologies {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 20%;
+  color: aliceblue;
+  height: 100%;
+  justify-items: center;
+}
+h3 {
+  padding-top: 30px;
+}
+.githubImg {
+  margin-top: 2rem;
+  height: 3rem;
+}
