@@ -250,6 +250,8 @@
     </div>
 
     <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+
+
       <div class="tabla">
         {% for project in projects %}
         <div style="margin-top: 20px">
@@ -268,15 +270,11 @@
               <div class="technologies">
                 <div class="icons">
                   <h3>Made with:</h1>
-                    {% for projectTechnology in projectsTechnologys %}
-                    {% if projectTechnology.projectId == project.id %}
-                    {% for technology in technologys %}
-                    {% if technology.id == projectTechnology.technologyId %}
-                    <img src="{{ technology.img }}" alt="" class="technologyImg">
+                    {% for join in joins %}
+                    {% if join.projectId == project.id %}
+                    <img src="{{ join.img }}" alt="" class="technologyImg">
                     {% endif %}
-                    {% endfor %}
-                    {% endif %}
-                    {% endfor %}
+                    {% endfor %}  
                 </div>
                 <div class="github">
                   <a href="{{ project.repo }}" target="_blank">
@@ -284,7 +282,6 @@
                   </a>
                 </div>
               </div>
-
             </div>
           </div>
         </div>

@@ -22,7 +22,7 @@ class ProjectController {
             $statement->execute();
 
             $result = $statement->fetchAll();
-
+            
             return $result;
 
           } catch(PDOException $error) {
@@ -35,12 +35,12 @@ class ProjectController {
         try  {
        
             $sql = "SELECT p.id 
-                    AS projectId, p.nombre_proyecto, t.id 
-                    AS technologyId, t.nombre_tecnologia, t.img
-                    FROM technology t
-                    JOIN project_technology pt 
+                    AS projectId, p.name, t.id 
+                    AS technologyId, t.name, t.img
+                    FROM Technology t
+                    JOIN ProjectTechnology pt 
                     ON t.id = pt.technologyId
-                    JOIN project p 
+                    JOIN Project p 
                     ON pt.projectId = p.id";
         
             $statement = $this->connection->prepare($sql);
@@ -48,7 +48,9 @@ class ProjectController {
             $statement->execute();
 
             $result = $statement->fetchAll();
-
+            print_r("<pre>");
+            print_r($result);
+            print_r("</pre>");
             return $result;
 
           } catch(PDOException $error) {

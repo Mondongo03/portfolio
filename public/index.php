@@ -25,7 +25,7 @@ echo $twig->render('index.html', [
 	'work' => 'Desarrollador de aplicaciones multiplataforma & web',
 	'projects' => $projectController->getProjects(),
 	'technologys' => $technologyController->getTechnology(),
-	'projectsTechnologys' => $project_technologyController->getProjectTechnology()
+	'joins' => $projectController->getJoin()
 	
 ]);
  
