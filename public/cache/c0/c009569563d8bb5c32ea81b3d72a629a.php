@@ -321,49 +321,58 @@ class __TwigTemplate_ec1d66153439d6ae7942877a5203699f extends Template
             <div class=\"bg-dark shadow-sm mx-auto\"
               style=\"width: 90%; height: 500px; border-radius: 21px 21px 21px 21px;\" id=\"blackBackground\">
 
-              <img class=\"projectImg\" src=\"https://miro.medium.com/v2/resize:fit:938/1*swyezhLxeZ3ES9CyWBLnDQ.png\" alt=\"\" srcset=\"\">
+              <img class=\"projectImg\" src=\"https://miro.medium.com/v2/resize:fit:938/1*swyezhLxeZ3ES9CyWBLnDQ.png\"
+                alt=\"\" srcset=\"\">
               <div class=\"technologies\">
-                <h3>Made with:</h1>
-                ";
-            // line 269
+                <div class=\"icons\">
+                  <h3>Made with:</h1>
+                    ";
+            // line 271
             $context['_parent'] = $context;
             $context['_seq'] = CoreExtension::ensureTraversable(($context["projectsTechnologys"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["projectTechnology"]) {
-                // line 270
-                yield "                  ";
-                if ((CoreExtension::getAttribute($this->env, $this->source, $context["projectTechnology"], "projectId", [], "any", false, false, false, 270) == CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 270))) {
-                    // line 271
+                // line 272
+                yield "                    ";
+                if ((CoreExtension::getAttribute($this->env, $this->source, $context["projectTechnology"], "projectId", [], "any", false, false, false, 272) == CoreExtension::getAttribute($this->env, $this->source, $context["project"], "id", [], "any", false, false, false, 272))) {
+                    // line 273
                     yield "                    ";
                     $context['_parent'] = $context;
                     $context['_seq'] = CoreExtension::ensureTraversable(($context["technologys"] ?? null));
                     foreach ($context['_seq'] as $context["_key"] => $context["technology"]) {
-                        // line 272
-                        yield "                      ";
-                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["technology"], "id", [], "any", false, false, false, 272) == CoreExtension::getAttribute($this->env, $this->source, $context["projectTechnology"], "technologyId", [], "any", false, false, false, 272))) {
-                            // line 273
-                            yield "                      <img src=\"";
-                            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["technology"], "img", [], "any", false, false, false, 273), "html", null, true);
+                        // line 274
+                        yield "                    ";
+                        if ((CoreExtension::getAttribute($this->env, $this->source, $context["technology"], "id", [], "any", false, false, false, 274) == CoreExtension::getAttribute($this->env, $this->source, $context["projectTechnology"], "technologyId", [], "any", false, false, false, 274))) {
+                            // line 275
+                            yield "                    <img src=\"";
+                            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["technology"], "img", [], "any", false, false, false, 275), "html", null, true);
                             yield "\" alt=\"\" class=\"technologyImg\">
-                      ";
+                    ";
                         }
-                        // line 275
+                        // line 277
                         yield "                    ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_key'], $context['technology'], $context['_parent']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 276
-                    yield "                  ";
+                    // line 278
+                    yield "                    ";
                 }
-                // line 277
-                yield "                ";
+                // line 279
+                yield "                    ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_key'], $context['projectTechnology'], $context['_parent']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 278
-            yield "                <img src=\"../images/github.png\" alt=\"\" class=\"githubImg\">
-
+            // line 280
+            yield "                </div>
+                <div class=\"github\">
+                  <a href=\"";
+            // line 282
+            yield $this->env->getRuntime('Twig\Runtime\EscaperRuntime')->escape(CoreExtension::getAttribute($this->env, $this->source, $context["project"], "repo", [], "any", false, false, false, 282), "html", null, true);
+            yield "\" target=\"_blank\">
+                    <img src=\"../images/github.png\" alt=\"\" class=\"githubImg\">
+                  </a>
+                </div>
               </div>
 
             </div>
@@ -374,7 +383,7 @@ class __TwigTemplate_ec1d66153439d6ae7942877a5203699f extends Template
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_key'], $context['project'], $context['_parent']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 286
+        // line 292
         yield "      </div>
     </div>
 
@@ -462,7 +471,7 @@ class __TwigTemplate_ec1d66153439d6ae7942877a5203699f extends Template
      */
     public function getDebugInfo(): array
     {
-        return array (  378 => 286,  365 => 278,  359 => 277,  356 => 276,  350 => 275,  344 => 273,  341 => 272,  336 => 271,  333 => 270,  329 => 269,  318 => 261,  314 => 260,  307 => 255,  303 => 254,  278 => 232,  274 => 231,  42 => 1,);
+        return array (  387 => 292,  371 => 282,  367 => 280,  361 => 279,  358 => 278,  352 => 277,  346 => 275,  343 => 274,  338 => 273,  335 => 272,  331 => 271,  318 => 261,  314 => 260,  307 => 255,  303 => 254,  278 => 232,  274 => 231,  42 => 1,);
     }
 
     public function getSourceContext(): Source

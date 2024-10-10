@@ -263,20 +263,26 @@
             <div class="bg-dark shadow-sm mx-auto"
               style="width: 90%; height: 500px; border-radius: 21px 21px 21px 21px;" id="blackBackground">
 
-              <img class="projectImg" src="https://miro.medium.com/v2/resize:fit:938/1*swyezhLxeZ3ES9CyWBLnDQ.png" alt="" srcset="">
+              <img class="projectImg" src="https://miro.medium.com/v2/resize:fit:938/1*swyezhLxeZ3ES9CyWBLnDQ.png"
+                alt="" srcset="">
               <div class="technologies">
-                <h3>Made with:</h1>
-                {% for projectTechnology in projectsTechnologys %}
-                  {% if projectTechnology.projectId == project.id %}
+                <div class="icons">
+                  <h3>Made with:</h1>
+                    {% for projectTechnology in projectsTechnologys %}
+                    {% if projectTechnology.projectId == project.id %}
                     {% for technology in technologys %}
-                      {% if technology.id == projectTechnology.technologyId %}
-                      <img src="{{ technology.img }}" alt="" class="technologyImg">
-                      {% endif %}
+                    {% if technology.id == projectTechnology.technologyId %}
+                    <img src="{{ technology.img }}" alt="" class="technologyImg">
+                    {% endif %}
                     {% endfor %}
-                  {% endif %}
-                {% endfor %}
-                <img src="../images/github.png" alt="" class="githubImg">
-
+                    {% endif %}
+                    {% endfor %}
+                </div>
+                <div class="github">
+                  <a href="{{ project.repo }}" target="_blank">
+                    <img src="../images/github.png" alt="" class="githubImg">
+                  </a>
+                </div>
               </div>
 
             </div>

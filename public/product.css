@@ -83,7 +83,8 @@
   
 }
 .technologyImg {
-  height: 3rem;
+  height: 4rem;
+  padding-bottom: 10px;
 }
 #blackBackground {
   display: flex;
@@ -92,8 +93,7 @@
   padding-left: 5%;
 }
 .technologies {
-  display: grid;
-  grid-template-columns: 1fr;
+  position: relative;
   width: 20%;
   color: aliceblue;
   height: 100%;
@@ -104,5 +104,21 @@ h3 {
 }
 .githubImg {
   margin-top: 2rem;
-  height: 3rem;
+  height: 4rem;
+}
+.icons {
+  
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: min-content;
+  justify-items: center;
+  
+}
+.github {
+  padding-top: 20%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
