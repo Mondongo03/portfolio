@@ -11,7 +11,7 @@ $project_technologyController = new ProjectTechnologyController();
 // prepare twig
 $loader = new \Twig\Loader\FilesystemLoader('templates');
 $twig = new \Twig\Environment($loader, [
-	'cache' => 'cache',
+	//'cache' => 'cache',
 ]);
   
 // $pc = new ProjectController();
